@@ -1,0 +1,1615 @@
+<!doctype html>
+
+<html>
+
+  <head>
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+
+    <link href='http://fonts.googleapis.com/css?family=Karla:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <script src="//use.typekit.net/doz6xzb.js"></script>
+
+    <script>try{Typekit.load();}catch(e){}</script>
+
+    <link rel='icon' href='images/favicon.gif' type='image/gif'>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <script type="text/javascript" src="scripts/ss.js"></script>
+
+    <script>
+
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-57250936-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    <style>
+
+      /**************
+
+      base
+
+      **************/
+
+      html {
+
+        height: 100%;
+
+      }
+
+      body {
+
+        height: 100%;
+        margin: 0;
+
+        background: #aaa;
+
+        -webkit-animation: bugfix infinite 1s;
+        -moz-animation: bugfix infinite 1s;
+        -ms-animation: bugfix infinite 1s;
+        -o-animation: bugfix infinite 1s;
+        animation: bugfix infinite 1s;
+
+      }
+
+      h1 {
+
+        background: url("images/amd.png") no-repeat center center / contain;
+        white-space: nowrap;
+        text-indent: 100%;
+        overflow: hidden;
+        position: fixed;
+        height: 225px;
+        width: 225px;
+        z-index: 300;
+        left: 45px;
+        top: 85px;
+        margin: 0;
+
+      }
+
+      .social {
+
+        position: fixed;
+        z-index: 300;
+        bottom: 35px;
+        color: #fff;
+        left: 45px;
+
+      }
+
+      .facebook {
+
+        background: url("images/angela-facebook.gif") no-repeat center center / contain;
+        display: inline-block;
+        margin-right: 15px;
+        height: 25px;
+        width: 25px;
+
+      }
+
+      .instagram {
+
+        background: url("images/angela-ig.gif") no-repeat center center / contain;
+        display: inline-block;
+        margin-right: 15px;
+        height: 25px;
+        width: 25px;
+
+      }
+
+      .twitter {
+
+        background: url("images/angela-twitter.gif") no-repeat center center / contain;
+        display: inline-block;
+        height: 25px;
+        width: 25px;
+
+      }
+
+      /**************
+
+      navigation
+
+      **************/
+
+      input[type=radio] {
+
+        display: none;
+
+      }
+
+      /* menu */
+
+      .navigation {
+
+        font-family: 'Karla', sans-serif;
+        text-transform: uppercase;
+        font-weight: normal;
+        text-align: center;
+        position: fixed;
+        font-size: 10px;
+        z-index: 300;
+        width: 225px;
+        color: #fff;
+        left: 45px;
+        top: 305px;
+
+      }
+
+      .navigation label {
+
+        cursor: pointer;
+
+      }
+
+      .navigation label:nth-of-type(1) {
+
+        float: left;
+
+      }
+
+      .navigation label:nth-of-type(3) {
+
+        float: right;
+
+      }
+
+
+      /* popups */
+
+      .connect,
+      .follow,
+      .about {
+
+        font-family:'Karla', sans-serif;
+        margin: 302px 45px 0 0;
+        text-transform: none;
+        font-weight: normal;
+        text-align: right;
+        line-height: 18px;
+        font-weight: bold;
+        font-size: 14px;
+        position: fixed;
+        display: none;
+        z-index: 500;
+        color: #fff;
+        width: 50%;
+        bottom: 0;
+        right: 0;
+        top: 0;
+
+      }
+
+      /* about popup */
+
+      .about {
+
+        margin: 150px 45px 0 0;
+        text-transform: none;
+        font-weight: normal;
+        text-align: right;
+        line-height: 18px;
+        font-weight: bold;
+        font-size: 14px;
+        position: fixed;
+        display: none;
+        z-index: 500;
+        color: #fff;
+        width: 60%;
+        bottom: 0;
+        right: 0;
+        top: 0;
+
+      }
+
+      .about em {
+
+        letter-spacing: 0.035em;
+        font-weight: 700;
+
+      }
+
+      .about span {
+
+        letter-spacing: 0.05em;
+        font-style: italic;
+
+      }
+
+      /* follow popup */
+
+
+      .follow a {
+
+        text-decoration: none;
+        line-height: 24px;
+        display: block;
+        color: #fff;
+
+      }
+
+      /* connect popup */
+
+      .connect a {
+
+        text-decoration: underline;
+        color: #fff;
+
+      }
+
+      /* connect + follow popup newsletter */
+
+      .connect form,
+      .follow form {
+
+        position: absolute;
+        bottom: 80px;
+        right: 0px;
+      }
+
+      input {
+
+        font-family: 'Karla', sans-serif;
+        text-transform: uppercase;
+        -webkit-appearance: none;
+        background-color: #000;
+        letter-spacing: 0.06em;
+        border-radius: 0px;
+        font-size: 10px;
+        margin: 5px 0;
+        outline: none;
+        border: none;
+        padding: 7px;
+        width: 100px;
+        color: #fff;
+
+      }
+
+      input.enter-email {
+
+        -webkit-appearance: none;
+        text-transform: uppercase;
+        background-color: #fff;
+        padding: 7px 20px;
+        text-align: right;
+        display: block;
+        width: 400px;
+        color: #bbb;
+
+      }
+
+      /* enable pop up nav */
+
+      #about:checked + #follow:nth-child(n) + #connect + h1 + .navigation + .social + .about,
+      #follow:checked + #connect + h1 + .navigation + .social + .about + .follow,
+      #connect:checked + h1 + .navigation + .social + .about + .follow + .connect {
+
+        display: block;
+
+      }
+
+      /* styles pop up nav link */
+
+      #about:checked + #follow:nth-child(n) + #connect + h1 + .navigation label[for=about],
+      #follow:checked + #connect + h1 + .navigation label[for=follow],
+      #connect:checked + h1 + .navigation label[for=connect] {
+
+        border-bottom: 3px solid #fff;
+        padding-bottom: 3px;
+
+      }
+
+      label[for=about]:hover,
+      label[for=follow]:hover,
+      label[for=connect]:hover {
+
+        border-bottom: 3px solid #fff;
+        padding-bottom: 3px;
+
+      }
+
+      /* adds blur filter on popup */
+
+      #about:checked + #follow + #connect + h1 + .navigation + .social + .about + .follow + .connect + .landing,
+      #about:checked + #follow + #connect + h1 + .navigation + .social + .about + .follow + .connect + .landing + .motion,
+      #about:checked + #follow + #connect + h1 + .navigation + .social + .about + .follow + .connect + .landing + .motion + .main,
+      #follow:checked + #connect + h1 + .navigation + .social + .about + .follow + .connect + .landing,
+      #follow:checked + #connect + h1 + .navigation + .social + .about + .follow + .connect + .landing + .motion,
+      #follow:checked + #connect + h1 + .navigation + .social + .about + .follow + .connect + .landing + .motion + .main,
+      #connect:checked + h1 + .navigation + .social + .about + .follow + .connect + .landing,
+      #connect:checked + h1 + .navigation + .social + .about + .follow + .connect + .landing + .motion,
+      #connect:checked + h1 + .navigation + .social + .about + .follow + .connect + .landing + .motion + .main {
+
+        -webkit-filter: blur(10px);
+        -moz-filter: blur(10px);
+        -ms-filter: blur(10px);
+        -o-filter: blur(10px);
+        filter: blur(10px);
+
+      }
+
+
+
+      @-webkit-keyframes bugfix {
+
+        from { padding: 0; }
+        to { padding: 0; }
+
+      }
+
+      @-moz-keyframes bugfix {
+
+        from { padding: 0; }
+        to { padding: 0; }
+
+      }
+
+      @-ms-keyframes bugfix {
+
+        from { padding: 0; }
+        to { padding: 0; }
+
+      }
+
+      @keyframes bugfix {
+
+        from { padding: 0; }
+        to { padding: 0; }
+
+      }
+
+      /**************
+
+      slideshow
+
+      **************/
+
+      .landing {
+
+        position: relative;
+        z-index: 200;
+        height: 100%;
+        width: 100%;
+        right: 0;
+        left: 0;
+        top: 0;
+
+      }
+
+      .slideshow {
+
+        background-color: #000;
+        position: relative;
+        height: 100%;
+
+      }
+
+      .video {
+
+      position: absolute;
+      left: 50%;
+      right: 50%;
+      padding-bottom: 35px;
+      -webkit-animation: bounce 1s ease-in-out infinite;
+      -moz-animation: bounce 1s ease-in-out infinite;
+      -o-animation: bounce 1s ease-in-out infinite;
+      -ms-animation: bounce 1s ease-in-out infinite;
+      animation: bounce 1s ease-in-out infinite;
+        opacity: 1;
+
+      }
+
+
+      @-webkit-keyframes bounce {
+        0%  { opacity: .50; bottom: 4px;}
+        10% { opacity: .60; bottom: 3px;}
+        20% { opacity: .70; bottom: 2px;}
+        30% { opacity: .80; bottom: 1px;}
+        40% { opacity: .90; bottom: .5px;}
+        50% { opacity: 1; bottom: 0px;}
+        60% { opacity: .90; bottom: .5px;}
+        70% { opacity: .80; bottom: 1px;}
+        80% { opacity: .70; bottom: 2px;}
+        90% { opacity: .60; bottom: 3px;}
+        100% { opacity: .50; bottom: 4px;}
+      }
+
+      @-moz-keyframes bounce {
+        0%  { opacity: .50; bottom: 4px;}
+        10% { opacity: .60; bottom: 3px;}
+        20% { opacity: .70; bottom: 2px;}
+        30% { opacity: .80; bottom: 1px;}
+        40% { opacity: .90; bottom: .5px;}
+        50% { opacity: 1; bottom: 0px;}
+        60% { opacity: .90; bottom: .5px;}
+        70% { opacity: .80; bottom: 1px;}
+        80% { opacity: .70; bottom: 2px;}
+        90% { opacity: .60; bottom: 3px;}
+        100% { opacity: .50; bottom: 4px;}
+      }
+
+      @-ms-keyframes bounce {
+        0%  { opacity: .50; bottom: 4px;}
+        10% { opacity: .60; bottom: 3px;}
+        20% { opacity: .70; bottom: 2px;}
+        30% { opacity: .80; bottom: 1px;}
+        40% { opacity: .90; bottom: .5px;}
+        50% { opacity: 1; bottom: 0px;}
+        60% { opacity: .90; bottom: .5px;}
+        70% { opacity: .80; bottom: 1px;}
+        80% { opacity: .70; bottom: 2px;}
+        90% { opacity: .60; bottom: 3px;}
+        100% { opacity: .50; bottom: 4px;}
+      }
+
+      @-o-keyframes bounce {
+        0%  { opacity: .50; bottom: 4px;}
+        10% { opacity: .60; bottom: 3px;}
+        20% { opacity: .70; bottom: 2px;}
+        30% { opacity: .80; bottom: 1px;}
+        40% { opacity: .90; bottom: .5px;}
+        50% { opacity: 1; bottom: 0px;}
+        60% { opacity: .90; bottom: .5px;}
+        70% { opacity: .80; bottom: 1px;}
+        80% { opacity: .70; bottom: 2px;}
+        90% { opacity: .60; bottom: 3px;}
+        100% { opacity: .50; bottom: 4px;}
+      }
+
+      @keyframes bounce {
+        0%  { opacity: .50; bottom: 4px;}
+        10% { opacity: .60; bottom: 3px;}
+        20% { opacity: .70; bottom: 2px;}
+        30% { opacity: .80; bottom: 1px;}
+        40% { opacity: .90; bottom: .5px;}
+        50% { opacity: 1; bottom: 0px;}
+        60% { opacity: .90; bottom: .5px;}
+        70% { opacity: .80; bottom: 1px;}
+        80% { opacity: .70; bottom: 2px;}
+        90% { opacity: .60; bottom: 3px;}
+        100% { opacity: .50; bottom: 4px;}
+      }
+
+
+      .firstanimation {
+
+        background: url('images/angela-davis-slide-001.jpg') no-repeat center center / cover;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+
+        -webkit-animation: cycle 20s 0s infinite;
+        -moz-animation: cycle 20s 0s infinite;
+        -o-animation: cycle 20s 0s infinite;
+        -ms-animation: cycle 20s 0s infinite;
+        animation: cycle 20s 0s infinite;
+
+      }
+
+      .secondanimation {
+
+        background: url('images/angela-davis-slide-002.jpg') no-repeat center center / cover;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+
+        -webkit-animation: cycletwo 20s 0s infinite;
+        -moz-animation: cycletwo 20s 0s infinite;
+        -o-animation: cycletwo 20s 0s infinite;
+        -ms-animation: cycletwo 20s 0s infinite;
+        animation: cycletwo 20s 0s infinite;
+
+
+      }
+
+      .thirdanimation {
+
+        background: url('images/angela-davis-slide-003.jpg') no-repeat center center / cover;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+
+        -webkit-animation: cyclethree 20s 0s infinite;
+        -moz-animation: cyclethree 20s 0s infinite;
+        -ms-animation: cyclethree 20s 0s infinite;
+        -o-animation: cyclethree 20s 0s infinite;
+        animation: cyclethree 20s 0s infinite;
+
+
+      }
+
+      .fourthanimation {
+
+        background: url('images/angela-davis-slide-004.jpg') no-repeat center center / cover;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+
+        -webkit-animation: cyclefour 20s 0s infinite;
+        -moz-animation: cyclefour 20s 0s infinite;
+        -ms-animation: cyclefour 20s 0s infinite;
+        -o-animation: cyclefour 20s 0s infinite;
+        animation: cyclefour 20s 0s infinite;
+
+      }
+
+      /* keyframes */
+
+      /*cyce one*/
+
+      @-webkit-keyframes cycle {
+        0%  { opacity: 1; }
+        20% { opacity: 1; }
+        40% { opacity: 0; }
+        60% { opacity: 0; }
+        80% { opacity: 0; }
+        100%{ opacity: 0; }
+
+      }
+
+      @-moz-keyframes cycle {
+        0%  { opacity: 1; }
+        20% { opacity: 1; }
+        40% { opacity: 0; }
+        60% { opacity: 0; }
+        80% { opacity: 0; }
+        100%{ opacity: 0; }
+
+      }
+
+      @-ms-keyframes cycle {
+        0%  { opacity: 1; }
+        20% { opacity: 1; }
+        40% { opacity: 0; }
+        60% { opacity: 0; }
+        80% { opacity: 0; }
+        100%{ opacity: 0; }
+
+      }
+
+      @-o-keyframes cycle {
+        0%  { opacity: 1; }
+        20% { opacity: 1; }
+        40% { opacity: 0; }
+        60% { opacity: 0; }
+        80% { opacity: 0; }
+        100%{ opacity: 0; }
+
+      }
+
+      @keyframes cycle {
+        0%  { opacity: 1; }
+        20% { opacity: 1; }
+        40% { opacity: 0; }
+        60% { opacity: 0; }
+        80% { opacity: 0; }
+        100%{ opacity: 0; }
+
+      }
+
+      /* cycle two */
+
+      @-webkit-keyframes cycletwo {
+        0%  { opacity: 0; }
+        20% { opacity: 1; }
+        40% { opacity: 1; }
+        60% { opacity: 0; }
+        80% { opacity: 0; }
+        100%{ opacity: 0; }
+      }
+
+      @-moz-keyframes cycletwo {
+        0%  { opacity: 0; }
+        20% { opacity: 1; }
+        40% { opacity: 1; }
+        60% { opacity: 0; }
+        80% { opacity: 0; }
+        100%{ opacity: 0; }
+      }
+
+      @-ms-keyframes cycletwo {
+        0%  { opacity: 0; }
+        20% { opacity: 1; }
+        40% { opacity: 1; }
+        60% { opacity: 0; }
+        80% { opacity: 0; }
+        100%{ opacity: 0; }
+      }
+
+      @-o-keyframes cycletwo {
+        0%  { opacity: 0; }
+        20% { opacity: 1; }
+        40% { opacity: 1; }
+        60% { opacity: 0; }
+        80% { opacity: 0; }
+        100%{ opacity: 0; }
+      }
+
+      @keyframes cycletwo {
+        0%  { opacity: 0; }
+        20% { opacity: 1; }
+        40% { opacity: 1; }
+        60% { opacity: 0; }
+        80% { opacity: 0; }
+        100%{ opacity: 0; }
+      }
+
+      /* cycle three */
+
+      @-webkit-keyframes cyclethree {
+        0%  { opacity: 0; }
+        20% { opacity: 0; }
+        40% { opacity: 0; }
+        60% { opacity: 1; }
+        80% { opacity: 1; }
+        100%{ opacity: 0; }
+      }
+
+      @-moz-keyframes cyclethree {
+        0%  { opacity: 0; }
+        20% { opacity: 0; }
+        40% { opacity: 0; }
+        60% { opacity: 1; }
+        80% { opacity: 1; }
+        100%{ opacity: 0; }
+      }
+
+      @-ms-keyframes cyclethree {
+        0%  { opacity: 0; }
+        20% { opacity: 0; }
+        40% { opacity: 0; }
+        60% { opacity: 1; }
+        80% { opacity: 1; }
+        100%{ opacity: 0; }
+      }
+
+      @-o-keyframes cyclethree {
+        0%  { opacity: 0; }
+        20% { opacity: 0; }
+        40% { opacity: 0; }
+        60% { opacity: 1; }
+        80% { opacity: 1; }
+        100%{ opacity: 0; }
+      }
+
+      @keyframes cyclethree {
+        0%  { opacity: 0; }
+        20% { opacity: 0; }
+        40% { opacity: 0; }
+        60% { opacity: 1; }
+        80% { opacity: 1; }
+        100%{ opacity: 0; }
+      }
+
+      /* cycle four */
+
+      @-webkit-keyframes cyclefour {
+        0%  { opacity: 0; }
+        20% { opacity: 0; }
+        40% { opacity: 0; }
+        60% { opacity: 0; }
+        80% { opacity: 0; }
+        95% { opacity: 1; }
+        100%{ opacity: 1; }
+      }
+
+      @-moz-keyframes cyclefour {
+        0%  { opacity: 0; }
+        20% { opacity: 0; }
+        40% { opacity: 0; }
+        60% { opacity: 0; }
+        80% { opacity: 0; }
+        95% { opacity: 1; }
+        100%{ opacity: 1; }
+      }
+
+      @-ms-keyframes cyclefour {
+        0%  { opacity: 0; }
+        20% { opacity: 0; }
+        40% { opacity: 0; }
+        60% { opacity: 0; }
+        80% { opacity: 0; }
+        95% { opacity: 1; }
+        100%{ opacity: 1; }
+      }
+
+      @-o-keyframes cyclefour {
+        0%  { opacity: 0; }
+        20% { opacity: 0; }
+        40% { opacity: 0; }
+        60% { opacity: 0; }
+        80% { opacity: 0; }
+        95% { opacity: 1; }
+        100%{ opacity: 1; }
+      }
+
+      @keyframes cyclefour {
+        0%  { opacity: 0; }
+        20% { opacity: 0; }
+        40% { opacity: 0; }
+        60% { opacity: 0; }
+        80% { opacity: 0; }
+        95% { opacity: 1; }
+        100%{ opacity: 1; }
+      }
+
+
+      /**************
+
+      main
+
+      **************/
+
+      .main {
+
+        position: relative;
+        z-index: 200;
+        top: 75%;
+
+        background: -webkit-linear-gradient(transparent, #000);
+        background: -mox-linear-gradient(transparent, #000);
+        background: -ms-linear-gradient(transparent, #000);
+        background: -o-linear-gradient(transparent, #000);
+        background: linear-gradient(transparent, #000);
+
+      }
+
+      /* image grid */
+
+      .grid-wrapper {
+
+        margin-bottom: -50px;
+        padding-bottom: 90%;
+        position: relative;
+        overflow: hidden;
+        z-index: 350;
+        width: 100%;
+
+        background: -webkit-linear-gradient(transparent, #000);
+        background: -mox-linear-gradient(transparent, #000);
+        background: -ms-linear-gradient(transparent, #000);
+        background: -o-linear-gradient(transparent, #000);
+        background: linear-gradient(transparent, #000);
+
+      }
+
+      .grid {
+
+        -webkit-transform: rotate( -3deg ) scale( 1.1 , 1.1 );
+        -moz-transform: rotate( -3deg ) scale( 1.1 , 1.1 );
+        -ms-transform: rotate( -3deg ) scale( 1.1 , 1.1 );
+        -o-transform: rotate( -3deg ) scale( 1.1 , 1.1 );
+        transform: rotate( -3deg ) scale( 1.1 , 1.1 );
+
+        padding-bottom: 1%;
+        position: absolute;
+        margin-top: 45%;
+        width: 100%;
+
+      }
+
+      .grid label {
+
+        -webkit-transform: translate3d( 0 , 0 , 0 );
+        -moz-transform: translate3d( 0 , 0 , 0 );
+        -ms-transform: translate3d( 0 , 0 , 0 );
+        -o-transform: translate3d( 0 , 0 , 0 );
+        transform: translate3d( 0 , 0 , 0 );
+        position: absolute;
+        margin-top: 7.5%;
+        width: 50%;
+
+      }
+
+      .grid label:nth-of-type(1) {
+
+        margin: 0;
+        left: 0;
+        top: 0;
+
+      }
+
+      .grid label:nth-of-type(2) {
+
+        margin: 0;
+        right: 0;
+        top: 0;
+
+      }
+
+      .grid label:nth-of-type(3) {
+
+        margin: 0;
+        bottom: 0;
+        left: 0;
+
+      }
+
+      .grid label:nth-of-type(4) {
+
+        margin: 0;
+        bottom: 0;
+        right: 0;
+
+      }
+
+      .grid label img {
+
+        width: 100%;
+
+      }
+
+      /*.grid input:checked + label {
+
+        -webkit-transform: scale( 1.35 , 1.35 ) rotate( 3deg ) translate3d( 0 , 0 , 0 );
+        -moz-transform: scale( 1.35 , 1.35 ) rotate( 3deg ) translate3d( 0 , 0 , 0 );
+        -ms-transform: scale( 1.35 , 1.35 ) rotate( 3deg ) translate3d( 0 , 0 , 0 );
+        -o-transform: scale( 1.35 , 1.35 ) rotate( 3deg ) translate3d( 0 , 0 , 0 );
+        transform: scale( 1.35 , 1.35 ) rotate( 3deg ) translate3d( 0 , 0 , 0 );
+
+        -webkit-transition-duration: 500ms;
+        -moz-transition-duration: 500ms;
+        -ms-transition-duration: 500ms;
+        -o-transition-duration: 500ms;
+        transition-duration: 500ms;
+
+        z-index: 250;
+
+      }*/
+
+    .grid input:checked + label {
+
+      -webkit-animation: grid-pop 8s;
+      -moz-animation: grid-pop 8s;
+      -ms-animation: grid-pop 8s;
+      -o-animation: grid-pop 8s;
+      animation: grid-pop 8s;
+      z-index: 250;
+
+    }
+
+
+    @-webkit-keyframes grid-pop {
+      0%   { -webkit-transform: scale( 1 , 1 ) rotate( 0deg ) translate3d( 0 , 0 , 0 ); }
+      50%  { -webkit-transform: scale( 1.35 , 1.35 ) rotate( 3deg ) translate3d( 0 , 0 , 0 ); }
+      51%  { -webkit-transform: scale( 1.35 , 1.35 ) rotate( 3deg ) translate3d( 0 , 0 , 0 ); }
+      100% { -webkit-transform: scale( 1 , 1 ) rotate( 0deg ) translate3d( 0 , 0 , 0 ); }
+    }
+
+    @-moz-keyframes grid-pop {
+      0%   { -moz-transform: scale( 1 , 1 ) rotate( 0deg ) translate3d( 0 , 0 , 0 ); }
+      50%  { -moz-transform: scale( 1.35 , 1.35 ) rotate( 3deg ) translate3d( 0 , 0 , 0 ); }
+      51%  { -moz-transform: scale( 1.35 , 1.35 ) rotate( 3deg ) translate3d( 0 , 0 , 0 ); }
+      100% { -moz-transform: scale( 1 , 1 ) rotate( 0deg ) translate3d( 0 , 0 , 0 ); }
+    }
+
+    @-ms-keyframes grid-pop {
+      0%   { -ms-transform: scale( 1 , 1 ) rotate( 0deg ) translate3d( 0 , 0 , 0 ); }
+      50%  { -ms-transform: scale( 1.35 , 1.35 ) rotate( 3deg ) translate3d( 0 , 0 , 0 ); }
+      51%  { -ms-transform: scale( 1.35 , 1.35 ) rotate( 3deg ) translate3d( 0 , 0 , 0 ); }
+      100% { -ms-transform: scale( 1 , 1 ) rotate( 0deg ) translate3d( 0 , 0 , 0 ); }
+    }
+
+    @-o-keyframes grid-pop {
+      0%   { -o-transform: scale( 1 , 1 ) rotate( 0deg ) translate3d( 0 , 0 , 0 ); }
+      50%  { -o-transform: scale( 1.35 , 1.35 ) rotate( 3deg ) translate3d( 0 , 0 , 0 ); }
+      51%  { -o-transform: scale( 1.35 , 1.35 ) rotate( 3deg ) translate3d( 0 , 0 , 0 ); }
+      100% { -o-transform: scale( 1 , 1 ) rotate( 0deg ) translate3d( 0 , 0 , 0 ); }
+    }
+
+    @keyframes grid-pop {
+      0%   { transform: scale( 1 , 1 ) rotate( 0deg ) translate3d( 0 , 0 , 0 ); }
+      50%  { transform: scale( 1.35 , 1.35 ) rotate( 3deg ) translate3d( 0 , 0 , 0 ); }
+      51%  { transform: scale( 1.35 , 1.35 ) rotate( 3deg ) translate3d( 0 , 0 , 0 ); }
+      100% { transform: scale( 1 , 1 ) rotate( 0deg ) translate3d( 0 , 0 , 0 ); }
+    }
+
+      /* footer */
+
+      .footer {
+
+        position: relative;
+        background: #000;
+
+      }
+
+      .footer p {
+
+        font-family: 'Karla', sans-serif;
+        text-transform: uppercase;
+        padding: 80px 0 120px 0;
+        font-weight: normal;
+        font-style: italic;
+        text-align: center;
+        font-size: 32px;
+        margin: 0;
+        color: #fff;
+
+      }
+
+      /* footer email signup */
+
+      .footer-signup {
+
+        position: absolute;
+        width: 275px;
+        bottom: 35px;
+        color: #fff;
+        right: 15px;
+
+      }
+
+      .footer-signup input {
+
+        font-family: 'Karla', sans-serif;
+        box-sizing: border-box;
+        text-transform: uppercase;
+        -webkit-appearance: none;
+        background-color: #000;
+        letter-spacing: 0.06em;
+        border-radius: 0px;
+        font-size: 10px;
+        margin: 5px 0;
+        outline: none;
+        border: none;
+        padding: 7px;
+        width: 100px;
+        color: #fff;
+        float: left;
+
+      }
+
+      .footer-signup .footer-enter-email {
+
+        -webkit-appearance: none;
+        text-transform: uppercase;
+        background-color: #fff;
+        display: inline-block;
+        padding: 7px 20px;
+        text-align: left;
+        display: block;
+        width: 200px;
+        color: #bbb;
+
+      }
+
+      .footer-signup .button {
+
+        display: inline-block;
+        width: 20%;
+
+      }
+
+
+
+      /**************
+
+      video
+
+      **************/
+
+      .motion {
+
+        background: #000;
+        position: fixed;
+        z-index: -100;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: 0;
+
+      }
+
+      .video-wrapper {
+
+        position: relative;
+        padding-top: 25px;
+        height: 0;
+
+      }
+
+      .video-wrapper iframe {
+
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+        border: 0;
+
+      }
+
+
+      .builtwithlove {
+
+        font-family: "aktiv-grotesk-std", 'Karla', sans-serif;
+        margin: 10px 10px 0px 45px;
+        text-transform: uppercase;
+        padding-bottom: 15px;
+        text-align: left;
+        font-size: 8px;
+
+      }
+
+      .builtwithlove,
+      .builtwithlove a,
+      .builtwithlove sup {
+
+        letter-spacing: 0.1em;
+        text-decoration: none;
+        vertical-align: bottom;
+        color: #F5F5F5;
+
+      }
+
+
+
+      /**************
+
+      media queries
+
+      **************/
+
+      @media only screen
+      and (min-width : 300px) {
+
+        .video-wrapper {
+
+          padding-bottom: 80vh;
+
+        }
+
+        .footer p {
+
+          font-size: 28px;
+
+        }
+
+      }
+
+      @media only screen
+      and (min-width : 500px) {
+
+        .video-wrapper {
+
+          padding-bottom: 90vh;
+
+        }
+
+        .footer p {
+
+          font-size: 30px;
+
+        }
+
+      }
+
+      @media only screen
+      and (min-width : 1000px) {
+
+        .video-wrapper {
+
+          padding-bottom: 53%;
+
+        }
+
+        .footer p {
+
+          font-size: 34px;
+
+        }
+
+      }
+
+      /* smartphones - portrait & landscape */
+
+      @media only screen
+      and (min-device-width : 320px)
+      and (max-device-width : 568px) {
+
+        h1 {
+
+          top: 45px;
+          left: 20px;
+          height: 90px;
+          width: 90px;
+
+        }
+
+        .navigation {
+
+          font-family: 'Karla', sans-serif;
+          text-align: left;
+          font-size: 12px;
+          top: 135px;
+          left: 20px;
+
+        }
+
+        .social {
+
+          bottom: 15px;
+          left: 20px;
+
+        }
+
+        .facebook {
+
+          margin-right: 10px;
+          height: 20px;
+          width: 20px;
+
+        }
+
+        .instagram {
+
+          margin-right: 10px;
+          height: 20px;
+          width: 20px;
+
+        }
+
+        .twitter {
+
+          height: 20px;
+          width: 20px;
+
+        }
+
+        label[for=about],
+        label[for=follow],
+        label[for=connect] {
+
+          margin-top: 5px;
+          display: block;
+          width: 90px;
+          float: none;
+          margin: 0;
+
+        }
+
+        .navigation label:nth-of-type(3) {
+
+          float: none;
+
+        }
+
+        .connect,
+        .follow,
+        .about {
+
+          margin: 205px auto 40px auto;
+          max-height: 225px;
+          overflow: scroll;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          top: 0;
+          width: 90%;
+
+        }
+
+        .about {
+
+        overflow: scroll;
+
+      }
+
+        .follow form {
+
+          max-width: 90%;
+          bottom: 0;
+
+        }
+
+        .connect form {
+
+          display: none;
+
+        }
+
+        .firstanimation {
+
+          background: url('images/angela-davis-mobile-001.jpg')no-repeat center center / cover;
+
+          -webkit-animation: none;
+
+        }
+
+        .secondanimation {
+
+          background: url('images/angela-davis-mobile-002.jpg')no-repeat center center / cover;
+
+          -webkit-animation: none;
+
+
+        }
+
+        .thirdanimation {
+
+          background: url('images/angela-davis-mobile-003.jpg')no-repeat center center / cover;
+
+          -webkit-animation: none;
+
+        }
+
+        .fourthanimation {
+
+          background: url('images/angela-davis-mobile-004.jpg') no-repeat center center / cover;
+
+          -webkit-animation: none;
+
+        }
+
+        .video-wrapper {
+
+          padding-bottom: 125%;
+        }
+
+        .grid {
+
+          padding-bottom: 2%;
+
+        }
+
+        .grid input:checked + label {
+
+          -webkit-animation: none;
+          animation: none;
+
+
+        }
+
+        .footer p {
+
+          padding: 120px 0 180px 0;
+          font-size: 24px;
+
+        }
+
+        .footer-signup {
+
+          position: absolute;
+          width: 275px;
+          bottom: 85px;
+          color: #fff;
+          right: 45px;
+          left: 45px;
+
+        }
+
+      }
+
+      @media only screen
+      and (min-device-width : 320px)
+      and (max-device-width : 568px)
+      and (orientation : landscape) {
+
+      h1 {
+
+          top: 25px;
+          left: 15px;
+          height: 90px;
+          width: 90px;
+
+        }
+
+      .connect,
+      .follow,
+      .about {
+
+        font-family:'Karla', sans-serif;
+        margin: 0;
+        text-transform: none;
+        font-weight: normal;
+        text-align: right;
+        line-height: 12px;
+        font-size: 8px;
+        max-width:	70%;
+        position: fixed;
+        display: none;
+        z-index: 500;
+        color: #fff;
+        bottom: 5px;
+        right: 25px;
+        left: 140px;
+        top: 25px;
+
+      }
+
+      .follow {
+
+        font-size: 16px;
+
+      }
+
+      .follow a {
+
+        font-size: 10px;
+
+      }
+
+      .about {
+
+        overflow: scroll;
+
+      }
+
+      .social {
+
+        bottom: 15px;
+        left: 15px;
+
+      }
+
+        .video-wrapper {
+
+        padding-bottom: 50%;
+        max-width: 100%;
+        overflow: hidden;
+
+        }
+
+        .footer-signup {
+
+          position: absolute;
+          width: 375px;
+          bottom: 20px;
+          color: #fff;
+          right: 30%;
+          left: 50%;
+
+        }
+
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <input type="radio" id="about" name="popup">
+
+    <input type="radio" id="follow" name="popup">
+
+    <input type="radio" id="connect" name="popup">
+
+    <h1 onclick="document.getElementById('about').checked = false;document.getElementById('follow').checked = false;document.getElementById('connect').checked = false;document.getElementById('first').checked = false;document.getElementById('second').checked = false;document.getElementById('third').checked = false;document.getElementById('fourth').checked = false;window.scrollTo(0,0)">Angela Davis</h1>
+
+    <div class="navigation">
+
+      <label for="about">Angela M Davis</label>
+
+      <label for="follow">Follow</label>
+
+      <label for="connect">Connect</label>
+
+    </div>
+
+    <div class="social">
+
+      <a class="facebook" href="https://www.facebook.com/shapewithangela" target="_blank"></a>
+
+      <a class="instagram" href="http://instagram.com/shapewithangela" target="_blank"></a>
+
+      <a class="twitter" href="https://twitter.com/shapewithangela" target="_blank"></a>
+
+    </div>
+
+    <div class="about">
+
+      <p>
+
+        <em>If it doesn't challenge you,<br>it doesn't change you.</em>
+
+      </p>
+
+      <p>
+
+        Angela Davis is at the forefront of a fitness revolution. As a member of the USA Track and Field Team, Angela was a 5 time All-American who held world rankings at the 100m. She ran track professionally for Nike, was an Olympic Trials semi-finalist and a member of the World Championship team.
+
+      </p>
+
+      <p>
+
+        Born into a sports family, Angela's father Jerry Manuel played, coached and managed baseball in the MLB. Drive, determination, and a competitive spirit were instilled in Angela from a young age. Angela has been coaching and training private clients for the past 15 years. In the meantime, Angela and her husband Jerome Davis have traveled the country giving speed clinics, teaching the fundamentals of running and leading motivational forums.
+
+      </p>
+
+      <p>
+
+        Angela Davis recently had the opportunity to bring her passion, motivation and "life skills" to Oprah Winfrey's acclaimed "Oprah's The Life You Want Weekend Tour." She was able to encourage thousands to believe in themselves and trust that they were already equipped for victory. She incorporated her positive affirmations, momentous music and exercise to move the masses toward change.
+
+      </p>
+
+
+      <p>
+      Angela currently trains private clients on and off the track, and is a spin instructor. Angela knows her true life's work is to help empower those who are ready for change.
+      </p>
+
+      <span>
+
+        Olympic Trials Semi-Finalist 100m - '00<br>
+        World Champion Team 100m - '01<br>
+        Ranked in the top 25 in the World 100m - '01<br>
+        Hall of Fame Oral Roberts University<br>
+        Summit League Conference Record Holder - 55m, 200m<br>
+        Five-time All-American<br>
+        AFAA Certified Personal Trainer<br>
+        Certified Spin Instructor<br>
+
+      </span>
+
+    </div>
+
+    <div class="follow">
+
+        @shapewithangela
+
+        <a href="https://twitter.com/shapewithangela" target="_blank">twitter</a>
+
+        <a href="http://instagram.com/shapewithangela" target="_blank">instagram</a>
+
+        <a href="https://www.facebook.com/shapewithangela" target="_blank">facebook</a>
+
+        <form action="http://amdla.us9.list-manage.com/subscribe/post" method="POST">
+
+          <input type="hidden" name="u" value="4aebe927f8c4084eec9ae5a02">
+
+          <input type="hidden" name="id" value="d535cd228c">
+
+          <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" placeholder="enter your email" class="enter-email">
+
+          <input type="submit" class="button" name="submit" value="subscribe">
+
+        </form>
+
+      </div>
+
+    <div class="connect">
+
+      General Inquiries<br>
+      <a href="mailto:info@amd.la">info@amd.la</a><br><br>
+      Press/Media Inquiries<br>
+      <a href="mailto:media@amd.la">media@amd.la</a><br><br>
+      Management &amp; Booking Inquiries<br>
+      Brand Endorsements, Spokesperson Contracts, Ambassador Programs, etc., please contact<br>
+      <a href="mailto:management@amd.la">management@amd.la</a>
+
+      <form action="http://amdla.us9.list-manage.com/subscribe/post" method="POST">
+
+        <input type="hidden" name="u" value="4aebe927f8c4084eec9ae5a02">
+
+        <input type="hidden" name="id" value="d535cd228c">
+
+        <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" placeholder="enter your email" class="enter-email">
+
+        <input type="submit" class="button" name="submit" value="subscribe">
+
+      </form>
+
+      </div>
+
+    <div class="landing" onclick="document.getElementById('about').checked = false;document.getElementById('follow').checked = false;document.getElementById('connect').checked = false;">
+
+      <div class="slideshow">
+
+        <div class="firstanimation"></div>
+
+        <div class="secondanimation"></div>
+
+        <div class="thirdanimation"></div>
+
+        <div class="fourthanimation"></div>
+
+      </div>
+
+      <a href="#video" class="smoothScroll"><div class="video"><img src="images/down.png"></div></a>
+
+    </div>
+
+    <div id="video"></div>
+
+    <div class="motion" onclick="document.getElementById('first').checked = false;document.getElementById('second').checked = false;document.getElementById('third').checked = false;document.getElementById('fourth').checked = false;">
+
+      <div class="video-wrapper">
+
+        <iframe src="//player.vimeo.com/video/106886738" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+      </div>
+
+    </div>
+
+    <div class="main" onclick="document.getElementById('about').checked = false;document.getElementById('follow').checked = false;document.getElementById('connect').checked = false;">
+
+      <div class="grid-wrapper">
+
+        <div class="grid">
+
+          <input type="radio" name="grid" id="first">
+
+          <label for="first">
+
+            <img src="images/angela-davis-grid-001.jpg">
+
+          </label>
+
+          <input type="radio" name="grid" id="second">
+
+          <label for="second">
+
+            <img src="images/angela-davis-grid-002.jpg">
+
+          </label>
+
+          <input type="radio" name="grid" id="third">
+
+          <label for="third">
+
+            <img src="images/angela-davis-grid-003.jpg">
+
+          </label>
+
+          <input type="radio" name="grid" id="fourth">
+
+          <label for="fourth">
+
+            <img src="images/angela-davis-grid-004.jpg">
+
+          </label>
+
+        </div>
+
+      </div>
+
+      <div class="footer" onclick="document.getElementById('first').checked = false;document.getElementById('second').checked = false;document.getElementById('third').checked = false;document.getElementById('fourth').checked = false;">
+
+        <p>
+
+          Change from the inside out
+
+        </p>
+
+        <div class="footer-signup">
+
+          <form action="http://amdla.us9.list-manage.com/subscribe/post" method="POST">
+
+            <input type="hidden" name="u" value="4aebe927f8c4084eec9ae5a02">
+
+            <input type="hidden" name="id" value="d535cd228c">
+
+            <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" placeholder="enter your email" class="footer-enter-email">
+
+            <input type="submit" class="button" name="submit" value="join">
+
+          </form>
+
+        </div>
+
+      </div>
+
+      <div class="builtwithlove">Built by <a href="http://saramote.com/">Sara Mote <sup>&amp; Co.</sup></a></div>
+
+    </div>
+
+  </body>
+
+</html>
